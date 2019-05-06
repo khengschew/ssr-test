@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/index.js",
-    "build:dev": "webpack -d --watch",
-    "build:prod": "webpack -p"
+    "build:dev": "rm -rf client/dist; mkdir client/dist; cp -R client/src/static/. client/dist/ && webpack -d --watch",
+    "build:prod": "rm -rf client/dist; mkdir client/dist; cp -R client/src/static/. client/dist/ && webpack -p"
   },
   "keywords": [],
   "author": "",
